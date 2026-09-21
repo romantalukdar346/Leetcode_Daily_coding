@@ -1,0 +1,10 @@
+def divideArray(self, nums, k):
+    if len(nums)<3:
+        return []
+    nums.sort()
+    res=[]
+    for i in range(0,len(nums),3):
+        if nums[i+2]-nums[i]>k:
+            return []
+        res.append([nums[i],nums[i+1],nums[i+2]])
+    return res
